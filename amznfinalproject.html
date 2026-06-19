@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sandesh Amazon Store</title>
+
+    <style>
+      body{
+    font-family: Arial;
+    margin: 0;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.search{
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.search input{
+    padding: 6px;
+    width: 300px;
+}
+
+.cart{
+    float: right;
+    margin-top: 5px;
+}
+
+.product{
+    border: 1px solid gray;
+    width: 220px;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.product img{
+    width: 180px;
+    height: 150px;
+}
+
+.product button{
+    padding: 8px;
+    background-color: orange;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <span class="logo">Amazon Store</span>
+
+        <div class="search">
+            <input type="text" placeholder="Search Products">
+           
+        </div>
+
+        <span class="cart">
+            Cart: <span id="count">0</span>
+        </span>
+
+    </div>
+
+    <div class="product">
+        <img src="imagess/headphone.jpg">
+        <h3>Wireless Headphone</h3>
+        <p>₹999</p>
+        <button onclick="addCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://pixabay.com/images/download/x-8300238_1920.jpg">
+        <h3>Smart Watch</h3>
+        <p>₹1499</p>
+        <button onclick="addCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://www.istockphoto.com/photo/white-sneaker-isolated-on-white-background-gm1688015574-537234420?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_image&utm_content=srp_topbanner_media&utm_term=running+shoes">
+        <h3>Running Shoes</h3>
+        <p>₹1999</p>
+        <button onclick="addCart()">Add to Cart</button>
+    </div>
+
+    <script>
+        let cart = 0;
+
+        function addCart()
+        {
+            cart++;
+            document.getElementById("count").innerHTML = cart;
+        }
+    </script>
+
+</body>
+</html>
